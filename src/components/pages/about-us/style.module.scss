@@ -1,4 +1,34 @@
+$colorb: black !global;
+$pink:rgb(194, 87, 87) !global;
+
 .text {
+    margin: 20px;
+    @extend .span_text;
     text-align: center;
-    color: red;
+
+    .h2_text {
+        color: $pink;
+    }
+
+    .p_text {
+        color: $colorb;
+    }
+
 }
+
+.span_text {
+    display: block;
+}
+
+.contacts {
+    margin: 20px;
+    @extend .h2_text;
+
+    .p_text_contacts {
+        color: $colorb;
+        .span_contacts{
+            @extend .span_text
+        }
+    }
+}
+
